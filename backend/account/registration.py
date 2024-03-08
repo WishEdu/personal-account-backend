@@ -50,6 +50,8 @@ def registration_handler():
                      ensure_ascii=False), 500
 
     db.commit()
-    user_id = cursor.fetchone()['id']
 
-    return dumps({**asdict(get_user(user_id=user_id)), 'token': create_session(user, browser, request.remote_addr)}, ensure_ascii=False, default=str), 200
+    user_id = cursor.fetchone()['id']
+    user = get_user(user_id=user_id)
+
+    return dumps({**asdict(user), 'token': create_session(user, browser, request.remote_addr)}, ensure_ascii=False, default=str), 200
