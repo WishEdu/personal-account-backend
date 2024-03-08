@@ -1,5 +1,4 @@
 from dataclasses import astuple, asdict
-
 from flask import request
 from json import dumps
 from logging import error
@@ -10,6 +9,7 @@ from backend.modules.queries import CREATE_USER_QUERY
 from backend.modules.database import cursor, db
 from backend.modules.user import get_user
 from backend.modules.session_manager import create_session
+from backend.modules.code_generator import get_hash
 
 from backend.entities.forms import RegistrationForm
 
@@ -41,6 +41,8 @@ def registration_handler():
             error_message = 'Логин'
         return dumps({'errorMessage': f'{error_message} уже зарегистрирован.'}, ensure_ascii=False), 400
 
+    user.password = get_hash(user.password)
+
     try:
         cursor.execute(CREATE_USER_QUERY, astuple(user))
     except Exception as E:
@@ -52,6 +54,6 @@ def registration_handler():
     db.commit()
 
     user_id = cursor.fetchone()['id']
-    user = get_user(user_id=user_id)
+    user = get_user(id=user_id)
 
     return dumps({**asdict(user), 'token': create_session(user, browser, request.remote_addr)}, ensure_ascii=False, default=str), 200

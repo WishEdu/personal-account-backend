@@ -44,22 +44,12 @@ def get_user_info(user: User):
     return user
 
 
-def get_user(user_id: int = None, login: str = None, email: str = None):
-    params = {
-        'id': user_id,
-        'login': login,
-        'email': email,
-    }
+def get_user(sep='AND', **kwargs):
 
-    parameter = 'id'
-    if login is not None:
-        parameter = 'login'
-    elif email is not None:
-        parameter = 'email'
-
+    build_sql = f' {sep} '.join([f"{key}=%s" for key in kwargs])
     cursor.execute(
-        f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users WHERE {parameter}=%s",
-        (params[parameter],))
+        f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users WHERE {build_sql}",
+        (*kwargs.values(),))
     row = cursor.fetchone()
 
     if row is None:

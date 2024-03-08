@@ -6,6 +6,7 @@ from . import account_bp
 
 from backend.modules.user import get_user
 from backend.modules.session_manager import create_session
+from backend.modules.code_generator import get_hash
 from backend.entities.forms import LoginForm
 
 
@@ -15,7 +16,7 @@ def user_login_handler():
 
     if browser is None:
         return dumps({'errorMessage': 'Неверные данные запроса.'}, ensure_ascii=False), 403
-    print(browser)
+
     data = request.json
 
     try:
@@ -27,11 +28,11 @@ def user_login_handler():
     if not is_valid and len(data) < 2:
         return dumps(is_valid), 400
 
-    auth_data = form.auth
-
-    user = get_user(**{auth_data[0]: auth_data[1]})
+    auth = form.auth
+    user = get_user(password=get_hash(form.password), **{auth[0]: auth[1]})
 
     if user is None:
         return dumps({'errorMessage': 'Аккаунт не найден.'}, ensure_ascii=False), 400
 
-    return dumps({**asdict(user), 'token': create_session(user, browser, request.remote_addr)}, ensure_ascii=False, default=str), 200
+    return dumps({**asdict(user), 'token': create_session(user, browser, request.remote_addr)}, ensure_ascii=False,
+                 default=str), 200

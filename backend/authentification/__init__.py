@@ -29,7 +29,7 @@ def access_handler(permissions: tuple = ()):
                 if len(have_access) == 0:
                     return dumps({'errorMessage': 'Нет доступа!'}, ensure_ascii=False), 403
 
-            user = get_user(user_id)
+            user = get_user(id=user_id)
             if user is not None:
                 return func(user=user, **kwargs)
 
