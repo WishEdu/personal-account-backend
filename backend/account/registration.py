@@ -1,5 +1,6 @@
 from dataclasses import astuple, asdict
 from flask import request
+from flask_cors import cross_origin
 from json import dumps
 from logging import error
 
@@ -15,6 +16,7 @@ from backend.entities.forms import RegistrationForm
 
 
 @account_bp.post('/registration')
+@cross_origin()
 def registration_handler():
     browser = request.headers.get('browser')
 

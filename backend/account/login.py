@@ -1,5 +1,6 @@
 from dataclasses import asdict
 from flask import request
+from flask_cors import cross_origin
 from json import dumps
 
 from . import account_bp
@@ -11,6 +12,7 @@ from backend.entities.forms import LoginForm
 
 
 @account_bp.post('/login')
+@cross_origin()
 def user_login_handler():
     browser = request.headers.get('browser')
 
