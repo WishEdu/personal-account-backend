@@ -1,9 +1,10 @@
 
+
 # Personal Account backend
 
-## Documentation `API v1` 
+### **Dev domain** - `wish.ginda.info`
 
-### **Domain** - `wish.ginda.info`
+## Documentation `API v1` 
 
 ### Registration
 **Request**
@@ -13,7 +14,7 @@
 
 **Response**
 ```py
-body = {
+{
     "login": str,  # [a-z0-9_]{4,32} 
     "password": str,  # ((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,20})
     "email": str,  # ^(.+)@(.+)\.(.+)$
@@ -24,7 +25,7 @@ body = {
 }
 ```
 **Response**
-```json
+```py
 {
     "id": int,
     "login": str,
@@ -46,7 +47,7 @@ body = {
  * Headers - `browser: browserName browserVersion `
 
 **Request**
-```json
+```py
 {
     "password": str,  
     # Must email or login
@@ -55,7 +56,7 @@ body = {
 }
 ```
 **Response**
-```json
+```py
 {
     "id": int,
     "login": str,
@@ -76,8 +77,8 @@ body = {
  * Headers - `Authorization: token`
 
 **Response**
-```json
-response = {
+```py
+{
     "id": int,
     "login": str,
     "email": str,
