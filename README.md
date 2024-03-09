@@ -1,13 +1,17 @@
-# Documentation v1
+
+# Personal Account backend
+
+## Documentation `API v1` 
 
 ### **Domain** - `wish.ginda.info`
 
 ### Registration
- * Route  -  `/account/registration`
+**Request**
+ * Endpoint  -  `/account/registration`
  * Method - `POST`
- * Headers - `browser: ${browserName} ${browserVersion} `
+ * Headers - `browser: {browserName} {browserVersion} `
 
-**json:**
+**Response**
 ```py
 body = {
     "login": str,  # [a-z0-9_]{4,32} 
@@ -19,9 +23,9 @@ body = {
     "birthday": str  # (19|20)\d\d-((0[1-9]|1[012])-(0[1-9]|[12]\d)|(0[13-9]|1[012])-30|(0[13578]|1[02])-31)
 }
 ```
-**Response:**
-```py
-response = {
+**Response**
+```json
+{
     "id": int,
     "login": str,
     "email": str,
@@ -36,22 +40,23 @@ response = {
 ```
 
 ### Login
- * Route  -  `/account/login`
+**Request**
+ * Endpoint-  `/account/login`
  * Method - `POST`
- * Headers - `browser: ${browserName} ${browserVersion} `
+ * Headers - `browser: browserName browserVersion `
 
-**json:**
-```py
-body = {
+**Request**
+```json
+{
     "password": str,  
-    # Email | Login
+    # Must email or login
     "login": Optional[str], 
     "email": Optional[str],  
 }
 ```
-**Response:**
-```py
-response = {
+**Response**
+```json
+{
     "id": int,
     "login": str,
     "email": str,
@@ -66,12 +71,12 @@ response = {
 ```
 
 ### Profile
- * Route  -  `/account/me`
+ * Endpoint -  `/account/me`
  * Method - `GET`
- * Headers - `Authorization: ${token}`
+ * Headers - `Authorization: token`
 
-**Response:**
-```py
+**Response**
+```json
 response = {
     "id": int,
     "login": str,
