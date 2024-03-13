@@ -24,6 +24,14 @@ def registration_handler():
         return dumps({'errorMessage': 'Неверные данные запроса.'}, ensure_ascii=False), 403
 
     data = request.json
+
+    try:
+        data['login'] = data['login'].lower().strip()
+    except KeyError:
+        return dumps({'errorMessage': 'Недопустимые значения полей. Смотрите документацию.'}, ensure_ascii=False), 400
+    except TypeError:
+        return dumps({'errorMessage': 'Неверные данные запроса.'}, ensure_ascii=False), 400
+
     try:
         user = RegistrationForm(**data)
     except TypeError:
@@ -32,7 +40,7 @@ def registration_handler():
     is_valid = user.get_validation
 
     if is_valid is not True:
-        return dumps(is_valid), 400
+        return dumps(is_valid, ensure_ascii=False), 400
 
     cursor.execute("SELECT login, email FROM users WHERE login = %s OR email = %s", (user.login, user.email))
     exists = cursor.fetchone()
