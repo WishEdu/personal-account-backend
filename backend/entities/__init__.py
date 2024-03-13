@@ -12,6 +12,15 @@ regex_config = {
     'birthday': r'(19|20)\d\d-((0[1-9]|1[012])-(0[1-9]|[12]\d)|(0[13-9]|1[012])-30|(0[13578]|1[02])-31)',
 }
 
+regex_messages = {
+    'login': 'Логин может содержать от 4 до 32 символов, среди них: строчные латинские буквы, цифры и нижнее подчёркивание.',
+    'password': 'Пароль должен быть не короче 8 символов, среди них: Строчные и прописные латинские буквы, цифры.',
+    'email': 'Неверный формат электронной почты.',
+    'first_name': 'Некорректный формат имени.',
+    'last_name': 'Некорректный формат фамилии.',
+    'patronymic': 'Некорректный формат отчества.'
+}
+
 
 @dataclass
 class BaseFormClass:
@@ -20,11 +29,11 @@ class BaseFormClass:
     def get_validation(self):
         for f in fields(self):
             value = asdict(self)[f.name]
-            _type = (get_args(f.type) or (f.type,))[0]
+            _type = get_args(f.type) or (f.type,)
 
-            if isinstance(value, str) and not fullmatch(regex_config[f.name], value):
-                return {'errorMessage': f'Поле {f.name} со значением: {value} не прошло валидацию.'}
-            elif _type != type(value) and value != f.default:
+            if isinstance(value, str) and not fullmatch(regex_config[f.name], value) and type(None) not in _type:
+                return {'errorMessage': regex_messages.get(f.name, f'Ошибка валидации поля {f.name}')}
+            elif _type[0] != type(value) and value != f.default:
                 return {'errorMessage': f'Поле {f.name} со значением: {value} имеет некорректный тип данных'}
 
         return True

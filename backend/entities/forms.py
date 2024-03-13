@@ -10,8 +10,7 @@ class RegistrationForm(BaseFormClass):
     email: str
     first_name: str
     last_name: str
-    patronymic: Optional[str] = None
-    birthday: Optional[str] = None
+    patronymic: Optional[str] = ''
 
 
 @dataclass
