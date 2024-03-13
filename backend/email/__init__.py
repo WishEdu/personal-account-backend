@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-email = Blueprint('email', __name__, url_prefix='/email')
+email_blueprint = Blueprint('email', __name__, url_prefix='/email')
 
-from .confirm_mail import test
+from .email import send_mail
