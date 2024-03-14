@@ -1,10 +1,14 @@
+from os import getenv
 from typing import Optional
 from datetime import datetime
-from dataclasses import fields, asdict
+from dataclasses import fields
+from dotenv import load_dotenv
 
 from backend.modules.database import cursor
-from backend.entities.user_info import UserInfo, Group, Role
-from backend.entities.user import User
+from backend.entities.user import User, Group, Role
+
+
+load_dotenv()
 
 
 def get_user_permissions(user_id):
@@ -21,8 +25,11 @@ def get_user_permissions(user_id):
     return cursor.fetchall()
 
 
-def get_user_info(user: User):
-    user = UserInfo(**asdict(user))
+def get_user_info(user: User = None):
+
+    if user is None:
+        return None
+
     cursor.execute(
         f"""SELECT g.id, g.name
         FROM groups g 
@@ -56,3 +63,4 @@ def get_user(sep='AND', **kwargs):
         return None
 
     return User(**row)
+
