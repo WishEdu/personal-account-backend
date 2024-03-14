@@ -20,6 +20,7 @@ logging.basicConfig(level=logging.INFO, filename="backend_lk.log", format="%(asc
 
 
 from backend.account import account_bp
-from backend.email import email_blueprint
 app.register_blueprint(account_bp)
-app.register_blueprint(email_blueprint)
+
+from backend.email import email_bp
+app.register_blueprint(email_bp)

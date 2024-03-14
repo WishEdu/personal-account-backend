@@ -92,3 +92,198 @@
 2024-03-14 01:10:02,636 WARNING  * Debugger is active!
 2024-03-14 01:10:02,639 INFO  * Debugger PIN: 126-619-422
 2024-03-14 01:10:07,077 INFO 127.0.0.1 - - [14/Mar/2024 01:10:07] "POST /email/send HTTP/1.1" 200 -
+2024-03-14 01:27:46,856 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 01:27:46,856 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 01:27:46,857 INFO  * Restarting with stat
+2024-03-14 01:27:47,406 WARNING  * Debugger is active!
+2024-03-14 01:27:47,409 INFO  * Debugger PIN: 126-619-422
+2024-03-14 01:27:50,370 INFO 127.0.0.1 - - [14/Mar/2024 01:27:50] "[35m[1mPOST /email/send HTTP/1.1[0m" 500 -
+2024-03-14 01:29:03,869 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 01:29:03,869 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 01:29:03,869 INFO  * Restarting with stat
+2024-03-14 01:29:04,503 WARNING  * Debugger is active!
+2024-03-14 01:29:04,506 INFO  * Debugger PIN: 126-619-422
+2024-03-14 01:29:07,194 INFO 127.0.0.1 - - [14/Mar/2024 01:29:07] "POST /email/send HTTP/1.1" 200 -
+2024-03-14 01:29:33,327 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email.py', reloading
+2024-03-14 01:29:33,383 INFO  * Restarting with stat
+2024-03-14 01:29:34,030 WARNING  * Debugger is active!
+2024-03-14 01:29:34,032 INFO  * Debugger PIN: 126-619-422
+2024-03-14 01:30:38,795 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email.py', reloading
+2024-03-14 01:30:38,870 INFO  * Restarting with stat
+2024-03-14 01:30:39,469 WARNING  * Debugger is active!
+2024-03-14 01:30:39,472 INFO  * Debugger PIN: 126-619-422
+2024-03-14 01:30:45,685 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email.py', reloading
+2024-03-14 01:30:45,734 INFO  * Restarting with stat
+2024-03-14 01:30:46,322 WARNING  * Debugger is active!
+2024-03-14 01:30:46,324 INFO  * Debugger PIN: 126-619-422
+2024-03-14 01:31:07,937 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\__init__.py', reloading
+2024-03-14 01:31:08,029 INFO  * Restarting with stat
+2024-03-14 01:31:40,885 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 01:31:40,886 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 01:31:40,886 INFO  * Restarting with stat
+2024-03-14 01:31:41,519 WARNING  * Debugger is active!
+2024-03-14 01:31:41,522 INFO  * Debugger PIN: 126-619-422
+2024-03-14 01:31:45,022 INFO 127.0.0.1 - - [14/Mar/2024 01:31:45] "POST /email/send HTTP/1.1" 200 -
+2024-03-14 01:32:16,492 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email.py', reloading
+2024-03-14 01:32:16,553 INFO  * Restarting with stat
+2024-03-14 02:03:52,528 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:03:52,528 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:03:52,528 INFO  * Restarting with stat
+2024-03-14 02:03:53,124 WARNING  * Debugger is active!
+2024-03-14 02:03:53,128 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:04:01,359 INFO 127.0.0.1 - - [14/Mar/2024 02:04:01] "[33mPOST /email/send HTTP/1.1[0m" 404 -
+2024-03-14 02:04:32,232 INFO 127.0.0.1 - - [14/Mar/2024 02:04:32] "[31m[1mPOST /email/confirm-send HTTP/1.1[0m" 400 -
+2024-03-14 02:04:39,645 INFO 127.0.0.1 - - [14/Mar/2024 02:04:39] "[31m[1mPOST /email/confirm-send HTTP/1.1[0m" 400 -
+2024-03-14 02:04:50,706 INFO 127.0.0.1 - - [14/Mar/2024 02:04:50] "[35m[1mPOST /email/confirm-send HTTP/1.1[0m" 500 -
+2024-03-14 02:05:09,215 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:05:09,284 INFO  * Restarting with stat
+2024-03-14 02:05:09,900 WARNING  * Debugger is active!
+2024-03-14 02:05:09,903 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:05:12,928 INFO 127.0.0.1 - - [14/Mar/2024 02:05:12] "[35m[1mPOST /email/confirm-send HTTP/1.1[0m" 500 -
+2024-03-14 02:05:54,170 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:05:54,242 INFO  * Restarting with stat
+2024-03-14 02:05:54,893 WARNING  * Debugger is active!
+2024-03-14 02:05:54,896 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:05:57,097 INFO 127.0.0.1 - - [14/Mar/2024 02:05:57] "[35m[1mPOST /email/confirm-send HTTP/1.1[0m" 500 -
+2024-03-14 02:07:41,922 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:07:41,991 INFO  * Restarting with stat
+2024-03-14 02:07:42,631 WARNING  * Debugger is active!
+2024-03-14 02:07:42,634 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:07:48,236 INFO 127.0.0.1 - - [14/Mar/2024 02:07:48] "[35m[1mPOST /email/confirm-send HTTP/1.1[0m" 500 -
+2024-03-14 02:08:16,645 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:08:16,710 INFO  * Restarting with stat
+2024-03-14 02:08:17,374 WARNING  * Debugger is active!
+2024-03-14 02:08:17,377 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:08:30,802 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:08:30,876 INFO  * Restarting with stat
+2024-03-14 02:09:22,514 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:09:22,514 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:09:22,514 INFO  * Restarting with stat
+2024-03-14 02:09:23,108 WARNING  * Debugger is active!
+2024-03-14 02:09:23,111 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:09:27,759 INFO 127.0.0.1 - - [14/Mar/2024 02:09:27] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:09:51,997 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:09:52,046 INFO  * Restarting with stat
+2024-03-14 02:09:52,620 WARNING  * Debugger is active!
+2024-03-14 02:09:52,623 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:09:56,323 INFO 127.0.0.1 - - [14/Mar/2024 02:09:56] "GET /email/confirm?hash=65f22014632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1" 200 -
+2024-03-14 02:10:03,940 INFO 127.0.0.1 - - [14/Mar/2024 02:10:03] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:10:51,274 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:10:51,349 INFO  * Restarting with stat
+2024-03-14 02:10:52,005 WARNING  * Debugger is active!
+2024-03-14 02:10:52,009 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:10:59,428 INFO 127.0.0.1 - - [14/Mar/2024 02:10:59] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:32:12,689 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:32:12,747 INFO  * Restarting with stat
+2024-03-14 02:32:13,331 WARNING  * Debugger is active!
+2024-03-14 02:32:13,334 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:32:21,338 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:32:21,338 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:32:21,338 INFO  * Restarting with stat
+2024-03-14 02:32:21,972 WARNING  * Debugger is active!
+2024-03-14 02:32:21,975 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:32:25,413 INFO 127.0.0.1 - - [14/Mar/2024 02:32:25] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:39:14,671 INFO 127.0.0.1 - - [14/Mar/2024 02:39:14] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:42:21,079 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:42:21,168 INFO  * Restarting with stat
+2024-03-14 02:42:21,910 WARNING  * Debugger is active!
+2024-03-14 02:42:21,913 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:46:43,034 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:46:43,107 INFO  * Restarting with stat
+2024-03-14 02:46:53,197 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:46:53,197 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:46:53,198 INFO  * Restarting with stat
+2024-03-14 02:46:53,754 WARNING  * Debugger is active!
+2024-03-14 02:46:53,756 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:47:00,797 INFO 127.0.0.1 - - [14/Mar/2024 02:47:00] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:47:27,992 INFO 127.0.0.1 - - [14/Mar/2024 02:47:27] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:47:47,272 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:47:47,329 INFO  * Restarting with stat
+2024-03-14 02:47:47,986 WARNING  * Debugger is active!
+2024-03-14 02:47:47,989 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:49:13,357 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:49:13,413 INFO  * Restarting with stat
+2024-03-14 02:49:14,574 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:49:14,574 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:49:14,574 INFO  * Restarting with stat
+2024-03-14 02:49:15,188 WARNING  * Debugger is active!
+2024-03-14 02:49:15,191 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:49:21,178 INFO 127.0.0.1 - - [14/Mar/2024 02:49:21] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:51:36,010 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:51:36,075 INFO  * Restarting with stat
+2024-03-14 02:51:36,676 WARNING  * Debugger is active!
+2024-03-14 02:51:36,679 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:52:58,908 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:52:58,969 INFO  * Restarting with stat
+2024-03-14 02:52:59,614 WARNING  * Debugger is active!
+2024-03-14 02:52:59,617 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:53:45,877 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:53:45,940 INFO  * Restarting with stat
+2024-03-14 02:53:46,553 WARNING  * Debugger is active!
+2024-03-14 02:53:46,556 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:54:49,284 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:54:49,344 INFO  * Restarting with stat
+2024-03-14 02:54:49,920 WARNING  * Debugger is active!
+2024-03-14 02:54:49,922 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:55:32,047 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\email\\email_confirm.py', reloading
+2024-03-14 02:55:32,110 INFO  * Restarting with stat
+2024-03-14 02:55:32,742 WARNING  * Debugger is active!
+2024-03-14 02:55:32,746 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:57:42,370 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:57:42,438 INFO  * Restarting with stat
+2024-03-14 02:57:43,075 WARNING  * Debugger is active!
+2024-03-14 02:57:43,078 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:57:44,731 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:57:44,731 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:57:44,731 INFO  * Restarting with stat
+2024-03-14 02:57:45,478 WARNING  * Debugger is active!
+2024-03-14 02:57:45,481 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:57:50,183 INFO 127.0.0.1 - - [14/Mar/2024 02:57:50] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:58:03,030 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 02:58:03,110 INFO  * Restarting with stat
+2024-03-14 02:58:03,808 WARNING  * Debugger is active!
+2024-03-14 02:58:03,811 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:58:17,353 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-14 02:58:17,353 INFO [33mPress CTRL+C to quit[0m
+2024-03-14 02:58:17,353 INFO  * Restarting with stat
+2024-03-14 02:58:18,025 WARNING  * Debugger is active!
+2024-03-14 02:58:18,028 INFO  * Debugger PIN: 126-619-422
+2024-03-14 02:58:22,647 INFO 127.0.0.1 - - [14/Mar/2024 02:58:22] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:59:15,775 INFO 127.0.0.1 - - [14/Mar/2024 02:59:15] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 02:59:26,858 INFO 127.0.0.1 - - [14/Mar/2024 02:59:26] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 03:02:03,230 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 03:02:03,300 INFO  * Restarting with stat
+2024-03-14 03:02:03,954 WARNING  * Debugger is active!
+2024-03-14 03:02:03,957 INFO  * Debugger PIN: 126-619-422
+2024-03-14 03:02:15,248 INFO 127.0.0.1 - - [14/Mar/2024 03:02:15] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 03:02:20,558 INFO 127.0.0.1 - - [14/Mar/2024 03:02:20] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 03:03:16,971 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 03:03:17,040 INFO  * Restarting with stat
+2024-03-14 03:03:17,676 WARNING  * Debugger is active!
+2024-03-14 03:03:17,679 INFO  * Debugger PIN: 126-619-422
+2024-03-14 03:03:56,753 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 03:03:56,816 INFO  * Restarting with stat
+2024-03-14 03:03:57,433 WARNING  * Debugger is active!
+2024-03-14 03:03:57,437 INFO  * Debugger PIN: 126-619-422
+2024-03-14 03:04:00,641 INFO 127.0.0.1 - - [14/Mar/2024 03:04:00] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 03:05:29,961 INFO  * Detected change in 'D:\\Projects\\personal-account-backend\\backend\\modules\\create_mail.py', reloading
+2024-03-14 03:05:30,023 INFO  * Restarting with stat
+2024-03-14 03:05:30,696 WARNING  * Debugger is active!
+2024-03-14 03:05:30,699 INFO  * Debugger PIN: 126-619-422
+2024-03-14 03:05:35,163 INFO 127.0.0.1 - - [14/Mar/2024 03:05:35] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 03:05:41,962 INFO 127.0.0.1 - - [14/Mar/2024 03:05:41] "[32mGET /email/confirm?hash=65f23f4e632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1[0m" 302 -
+2024-03-14 03:06:25,101 INFO 127.0.0.1 - - [14/Mar/2024 03:06:25] "OPTIONS /email/confirm?hash=65f23f4e632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1" 200 -
+2024-03-14 03:06:25,124 INFO 127.0.0.1 - - [14/Mar/2024 03:06:25] "[32mGET /email/confirm?hash=65f23f4e632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1[0m" 302 -
+2024-03-14 03:06:43,627 INFO 127.0.0.1 - - [14/Mar/2024 03:06:43] "[32mGET /email/confirm?hash=65f23f4e632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1[0m" 302 -
+2024-03-14 03:08:01,323 INFO 127.0.0.1 - - [14/Mar/2024 03:08:01] "POST /email/confirm-send HTTP/1.1" 200 -
+2024-03-14 03:08:07,854 INFO 127.0.0.1 - - [14/Mar/2024 03:08:07] "[32mGET /email/confirm?hash=65f23fe0632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1[0m" 302 -
