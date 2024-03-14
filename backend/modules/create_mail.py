@@ -45,7 +45,7 @@ font-family: Roboto, sans-serif; font-weight: 400; font-style: normal;">
             margin-bottom: 10px;
             text-align: center;">
                 <h2>
-                    Приветствуем {{ USERNAME }},
+                    Приветствуем { username },
                 </h2>
                 <p style="margin-block: 20px;">
                     Благодарим за регистрация аккаунта в экосистеме WISH EDU!
