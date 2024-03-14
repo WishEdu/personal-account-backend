@@ -23,3 +23,7 @@ class LoginForm(BaseFormClass):
     def auth(self):
         return 'email' if self.email is not None else 'login', self.email or self.login
 
+@dataclass
+class ConfirmEmailForm(BaseFormClass):
+    user_id: int
+    email: str

@@ -1,5 +1,9 @@
 .env
 *.pyc
 .idea
+pyproject.toml
+poetry.lock
+
 /venv
 backend_lk.log
+
