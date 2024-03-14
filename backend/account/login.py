@@ -1,13 +1,16 @@
+from json import dumps
+from re import fullmatch
 from dataclasses import asdict
+
+from logging import error
 from flask import request
 from flask_cors import cross_origin
-from json import dumps
-from logging import error
-from . import account_bp
 
-from backend.modules.user import get_user, get_user_info
+from . import account_bp
+from backend.modules.user import action_login, get_user_info
 from backend.modules.session_manager import create_session
 from backend.modules.code_generator import get_hash
+from backend.entities import regex_config, regex_messages
 from backend.entities.forms import LoginForm
 from backend.modules.database import cursor, db
 
@@ -27,20 +30,10 @@ def user_login_handler():
     except TypeError:
         return dumps({'errorMessage': 'Недопустимые значения полей. Смотрите документацию.'}, ensure_ascii=False), 400
 
-    is_valid = form.get_validation
-    if not is_valid and len(data) < 2:
-        return dumps(is_valid), 400
-
-    auth = form.auth
-
-    user = get_user(password=get_hash(form.password), **{auth[0]: auth[1]})
+    user = action_login(password=get_hash(form.password), login=form.login)
+    
     if user is None:
-
-        errorMessage = 'таким именем пользователя'
-        if auth[0] == 'email':
-            errorMessage = 'такой электронной почтой'
-
-        return dumps({'errorMessage': f'Аккаунт с {errorMessage} и паролем не найден.'}, ensure_ascii=False), 400
+        return dumps({'errorMessage': f'Аккаунт с именем пользователя, почтой или паролем не найден.'}, ensure_ascii=False), 400
 
     user_info = get_user_info(user)
 

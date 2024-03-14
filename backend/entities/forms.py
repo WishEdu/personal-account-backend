@@ -15,13 +15,9 @@ class RegistrationForm(BaseFormClass):
 
 @dataclass
 class LoginForm(BaseFormClass):
-    password: str
-    login: Optional[str] = None
-    email: Optional[str] = None
 
-    @property
-    def auth(self):
-        return 'email' if self.email is not None else 'login', self.email or self.login
+    password: str
+    login: str
 
 @dataclass
 class ConfirmEmailForm(BaseFormClass):

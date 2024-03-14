@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from backend.modules.database import cursor
 from backend.entities.user import User, Group, Role
 
-
 load_dotenv()
 
 
@@ -26,7 +25,6 @@ def get_user_permissions(user_id):
 
 
 def get_user_info(user: User = None):
-
     if user is None:
         return None
 
@@ -52,7 +50,6 @@ def get_user_info(user: User = None):
 
 
 def get_user(sep='AND', **kwargs):
-
     build_sql = f' {sep} '.join([f"{key}=%s" for key in kwargs])
     cursor.execute(
         f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users WHERE {build_sql}",
@@ -64,3 +61,14 @@ def get_user(sep='AND', **kwargs):
 
     return User(**row)
 
+
+def action_login(login, password):
+    cursor.execute(
+        f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users WHERE password = %s AND (login = %s OR email = %s)",
+        (password, login, login))
+    row = cursor.fetchone()
+
+    if row is None:
+        return None
+
+    return User(**row)
