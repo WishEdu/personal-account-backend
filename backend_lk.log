@@ -287,3 +287,253 @@
 2024-03-14 03:06:43,627 INFO 127.0.0.1 - - [14/Mar/2024 03:06:43] "[32mGET /email/confirm?hash=65f23f4e632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1[0m" 302 -
 2024-03-14 03:08:01,323 INFO 127.0.0.1 - - [14/Mar/2024 03:08:01] "POST /email/confirm-send HTTP/1.1" 200 -
 2024-03-14 03:08:07,854 INFO 127.0.0.1 - - [14/Mar/2024 03:08:07] "[32mGET /email/confirm?hash=65f23fe0632624b16a7bd4fc80f19a4a48f75b7a857c9c878dbbfc95c1c7f46ee6a980a1 HTTP/1.1[0m" 302 -
+2024-04-06 16:00:13,825 INFO DATABASE LOAD.
+2024-04-06 16:00:14,551 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:00:14,551 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:00:14,553 INFO  * Restarting with stat
+2024-04-06 16:00:15,305 INFO DATABASE LOAD.
+2024-04-06 16:00:15,579 WARNING  * Debugger is active!
+2024-04-06 16:00:15,591 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:10:32,826 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\forms.py', reloading
+2024-04-06 16:10:32,947 INFO  * Restarting with stat
+2024-04-06 16:10:33,989 INFO DATABASE LOAD.
+2024-04-06 16:10:34,580 WARNING  * Debugger is active!
+2024-04-06 16:10:34,587 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:10:36,794 INFO DATABASE LOAD.
+2024-04-06 16:10:37,015 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:10:37,015 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:10:37,015 INFO  * Restarting with stat
+2024-04-06 16:10:37,728 INFO DATABASE LOAD.
+2024-04-06 16:10:38,076 WARNING  * Debugger is active!
+2024-04-06 16:10:38,083 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:10:54,846 INFO 127.0.0.1 - - [06/Apr/2024 16:10:54] "[31m[1mPOST /account/edit/user HTTP/1.1[0m" 400 -
+2024-04-06 16:11:20,480 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:11:20,573 INFO  * Restarting with stat
+2024-04-06 16:11:21,392 INFO DATABASE LOAD.
+2024-04-06 16:11:21,577 WARNING  * Debugger is active!
+2024-04-06 16:11:21,585 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:11:22,805 INFO DATABASE LOAD.
+2024-04-06 16:11:23,020 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:11:23,020 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:11:23,021 INFO  * Restarting with stat
+2024-04-06 16:11:23,753 INFO DATABASE LOAD.
+2024-04-06 16:11:23,939 WARNING  * Debugger is active!
+2024-04-06 16:11:23,947 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:11:29,313 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:11:29,398 INFO  * Restarting with stat
+2024-04-06 16:11:30,195 INFO DATABASE LOAD.
+2024-04-06 16:11:30,475 WARNING  * Debugger is active!
+2024-04-06 16:11:30,486 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:11:33,933 ERROR DATABASE ERROR ON EDIT_ACCOUNT: ОШИБКА:  ошибка синтаксиса (примерное положение: "=")
+LINE 1: UPDATE users SET Данила='Данила', Гинда='Гинда', ='', 2005-0...
+                                                         ^
+
+2024-04-06 16:11:33,933 INFO 127.0.0.1 - - [06/Apr/2024 16:11:33] "[35m[1mPOST /account/edit/user HTTP/1.1[0m" 500 -
+2024-04-06 16:12:33,021 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:12:33,120 INFO  * Restarting with stat
+2024-04-06 16:12:35,050 INFO DATABASE LOAD.
+2024-04-06 16:12:35,280 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:12:35,280 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:12:35,281 INFO  * Restarting with stat
+2024-04-06 16:12:36,163 INFO DATABASE LOAD.
+2024-04-06 16:12:36,369 WARNING  * Debugger is active!
+2024-04-06 16:12:36,378 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:12:36,750 ERROR DATABASE ERROR ON EDIT_ACCOUNT: ОШИБКА:  ошибка синтаксиса (примерное положение: "=")
+LINE 1: UPDATE users SET Данила='Данила', Гинда='Гинда', ='', 2005-0...
+                                                         ^
+
+2024-04-06 16:12:36,751 INFO 127.0.0.1 - - [06/Apr/2024 16:12:36] "[35m[1mPOST /account/edit/user HTTP/1.1[0m" 500 -
+2024-04-06 16:13:12,660 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:13:12,769 INFO  * Restarting with stat
+2024-04-06 16:13:13,772 INFO DATABASE LOAD.
+2024-04-06 16:13:13,980 WARNING  * Debugger is active!
+2024-04-06 16:13:13,988 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:13:15,862 INFO DATABASE LOAD.
+2024-04-06 16:13:16,089 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:13:16,089 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:13:16,090 INFO  * Restarting with stat
+2024-04-06 16:13:16,808 INFO DATABASE LOAD.
+2024-04-06 16:13:16,995 WARNING  * Debugger is active!
+2024-04-06 16:13:17,003 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:13:21,774 INFO UPDATE users SET Данила=%s, Гинда=%s, =%s, 2005-04-07=%s, Backend Developer from Voskresensk=%s WHERE id = %s
+2024-04-06 16:13:21,777 ERROR DATABASE ERROR ON EDIT_ACCOUNT: ОШИБКА:  ошибка синтаксиса (примерное положение: "=")
+LINE 1: UPDATE users SET Данила='Данила', Гинда='Гинда', ='', 2005-0...
+                                                         ^
+
+2024-04-06 16:13:21,777 INFO 127.0.0.1 - - [06/Apr/2024 16:13:21] "[35m[1mPOST /account/edit/user HTTP/1.1[0m" 500 -
+2024-04-06 16:14:21,607 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:14:21,723 INFO  * Restarting with stat
+2024-04-06 16:14:22,533 INFO DATABASE LOAD.
+2024-04-06 16:14:22,706 WARNING  * Debugger is active!
+2024-04-06 16:14:22,713 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:14:27,805 INFO DATABASE LOAD.
+2024-04-06 16:14:27,997 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:14:27,997 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:14:27,997 INFO  * Restarting with stat
+2024-04-06 16:14:28,732 INFO DATABASE LOAD.
+2024-04-06 16:14:28,914 WARNING  * Debugger is active!
+2024-04-06 16:14:28,921 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:14:29,747 INFO UPDATE users SET first_name=%s, last_name=%s, patronymic=%s, birthday=%s, description=%s WHERE id = %s
+2024-04-06 16:14:29,849 INFO 127.0.0.1 - - [06/Apr/2024 16:14:29] "[35m[1mPOST /account/edit/user HTTP/1.1[0m" 500 -
+2024-04-06 16:14:54,366 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:14:54,458 INFO  * Restarting with stat
+2024-04-06 16:14:55,297 INFO DATABASE LOAD.
+2024-04-06 16:14:56,808 INFO DATABASE LOAD.
+2024-04-06 16:14:57,062 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:14:57,062 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:14:57,062 INFO  * Restarting with stat
+2024-04-06 16:14:57,846 INFO DATABASE LOAD.
+2024-04-06 16:14:58,065 WARNING  * Debugger is active!
+2024-04-06 16:14:58,073 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:15:15,116 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:15:15,242 INFO  * Restarting with stat
+2024-04-06 16:15:16,030 INFO DATABASE LOAD.
+2024-04-06 16:15:16,212 WARNING  * Debugger is active!
+2024-04-06 16:15:16,219 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:15:18,444 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:15:18,561 INFO  * Restarting with stat
+2024-04-06 16:15:19,322 INFO DATABASE LOAD.
+2024-04-06 16:15:19,653 WARNING  * Debugger is active!
+2024-04-06 16:15:19,662 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:15:21,731 INFO UPDATE users SET first_name=%s, last_name=%s, patronymic=%s, birthday=%s, description=%s WHERE id = %s
+2024-04-06 16:15:21,732 INFO 127.0.0.1 - - [06/Apr/2024 16:15:21] "POST /account/edit/user HTTP/1.1" 200 -
+2024-04-06 16:15:34,590 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:15:34,684 INFO  * Restarting with stat
+2024-04-06 16:15:35,426 INFO DATABASE LOAD.
+2024-04-06 16:15:35,631 WARNING  * Debugger is active!
+2024-04-06 16:15:35,648 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:15:37,891 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:15:38,012 INFO  * Restarting with stat
+2024-04-06 16:15:40,073 INFO DATABASE LOAD.
+2024-04-06 16:15:40,296 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:15:40,296 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:15:40,296 INFO  * Restarting with stat
+2024-04-06 16:15:41,068 INFO DATABASE LOAD.
+2024-04-06 16:15:41,279 WARNING  * Debugger is active!
+2024-04-06 16:15:41,287 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:15:49,586 INFO UPDATE users SET first_name=%s, last_name=%s, patronymic=%s, birthday=%s, description=%s WHERE id = %s
+2024-04-06 16:15:49,589 INFO 127.0.0.1 - - [06/Apr/2024 16:15:49] "POST /account/edit/user HTTP/1.1" 200 -
+2024-04-06 16:16:29,961 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\forms.py', reloading
+2024-04-06 16:16:30,061 INFO  * Restarting with stat
+2024-04-06 16:16:30,787 INFO DATABASE LOAD.
+2024-04-06 16:16:30,999 WARNING  * Debugger is active!
+2024-04-06 16:16:31,009 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:17:00,575 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\__init__.py', reloading
+2024-04-06 16:17:00,711 INFO  * Restarting with stat
+2024-04-06 16:17:01,547 INFO DATABASE LOAD.
+2024-04-06 16:17:01,761 WARNING  * Debugger is active!
+2024-04-06 16:17:01,769 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:18:40,167 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\__init__.py', reloading
+2024-04-06 16:18:40,256 INFO  * Restarting with stat
+2024-04-06 16:18:41,050 INFO DATABASE LOAD.
+2024-04-06 16:18:41,253 WARNING  * Debugger is active!
+2024-04-06 16:18:41,263 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:19:40,559 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\__init__.py', reloading
+2024-04-06 16:19:40,667 INFO  * Restarting with stat
+2024-04-06 16:19:41,493 INFO DATABASE LOAD.
+2024-04-06 16:19:41,712 WARNING  * Debugger is active!
+2024-04-06 16:19:41,722 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:19:48,233 INFO DATABASE LOAD.
+2024-04-06 16:19:48,442 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:19:48,442 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:19:48,442 INFO  * Restarting with stat
+2024-04-06 16:19:49,319 INFO DATABASE LOAD.
+2024-04-06 16:19:49,525 WARNING  * Debugger is active!
+2024-04-06 16:19:49,534 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:19:55,374 INFO UPDATE users SET first_name=%s, last_name=%s, patronymic=%s, birthday=%s, description=%s, background_color=%s WHERE id = %s
+2024-04-06 16:19:55,377 INFO 127.0.0.1 - - [06/Apr/2024 16:19:55] "POST /account/edit/user HTTP/1.1" 200 -
+2024-04-06 16:20:22,540 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\forms.py', reloading
+2024-04-06 16:20:22,751 INFO  * Restarting with stat
+2024-04-06 16:20:23,857 INFO DATABASE LOAD.
+2024-04-06 16:20:24,059 WARNING  * Debugger is active!
+2024-04-06 16:20:25,399 INFO DATABASE LOAD.
+2024-04-06 16:20:25,651 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:20:25,652 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:20:25,652 INFO  * Restarting with stat
+2024-04-06 16:20:26,599 INFO DATABASE LOAD.
+2024-04-06 16:20:26,838 WARNING  * Debugger is active!
+2024-04-06 16:20:26,848 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:20:48,760 INFO 127.0.0.1 - - [06/Apr/2024 16:20:48] "[31m[1mPOST /account/edit/user HTTP/1.1[0m" 400 -
+2024-04-06 16:22:15,184 INFO UPDATE users SET background_color=%s, first_name=%s, last_name=%s, patronymic=%s, birthday=%s, description=%s WHERE id = %s
+2024-04-06 16:22:15,188 INFO 127.0.0.1 - - [06/Apr/2024 16:22:15] "POST /account/edit/user HTTP/1.1" 200 -
+2024-04-06 16:22:50,845 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\modules\\user.py', reloading
+2024-04-06 16:22:51,033 INFO  * Restarting with stat
+2024-04-06 16:22:52,173 INFO DATABASE LOAD.
+2024-04-06 16:22:52,361 WARNING  * Debugger is active!
+2024-04-06 16:22:52,370 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:22:53,972 INFO DATABASE LOAD.
+2024-04-06 16:22:54,235 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:22:54,235 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:22:54,235 INFO  * Restarting with stat
+2024-04-06 16:22:55,147 INFO DATABASE LOAD.
+2024-04-06 16:22:55,343 WARNING  * Debugger is active!
+2024-04-06 16:22:55,352 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:22:58,282 INFO 127.0.0.1 - - [06/Apr/2024 16:22:58] "[31m[1mPOST /account/edit/user HTTP/1.1[0m" 400 -
+2024-04-06 16:23:40,892 INFO 127.0.0.1 - - [06/Apr/2024 16:23:40] "[31m[1mPOST /account/edit/user HTTP/1.1[0m" 400 -
+2024-04-06 16:24:42,533 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\forms.py', reloading
+2024-04-06 16:24:42,626 INFO  * Restarting with stat
+2024-04-06 16:24:43,481 INFO DATABASE LOAD.
+2024-04-06 16:24:43,676 WARNING  * Debugger is active!
+2024-04-06 16:24:43,685 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:24:48,044 INFO DATABASE LOAD.
+2024-04-06 16:24:48,266 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:24:48,267 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:24:48,267 INFO  * Restarting with stat
+2024-04-06 16:24:49,174 INFO DATABASE LOAD.
+2024-04-06 16:24:49,427 WARNING  * Debugger is active!
+2024-04-06 16:24:49,436 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:24:50,711 INFO 127.0.0.1 - - [06/Apr/2024 16:24:50] "[35m[1mPOST /account/edit/user HTTP/1.1[0m" 500 -
+2024-04-06 16:25:20,306 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\__init__.py', reloading
+2024-04-06 16:25:20,413 INFO  * Restarting with stat
+2024-04-06 16:25:21,291 INFO DATABASE LOAD.
+2024-04-06 16:25:21,505 WARNING  * Debugger is active!
+2024-04-06 16:25:21,512 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:25:39,684 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\entities\\__init__.py', reloading
+2024-04-06 16:25:39,771 INFO  * Restarting with stat
+2024-04-06 16:25:40,526 INFO DATABASE LOAD.
+2024-04-06 16:25:40,711 WARNING  * Debugger is active!
+2024-04-06 16:25:40,721 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:25:44,032 INFO DATABASE LOAD.
+2024-04-06 16:25:44,268 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:25:44,268 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:25:44,268 INFO  * Restarting with stat
+2024-04-06 16:25:45,017 INFO DATABASE LOAD.
+2024-04-06 16:25:45,201 WARNING  * Debugger is active!
+2024-04-06 16:25:45,208 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:25:50,516 INFO UPDATE users SET background_color=%s, first_name=%s, last_name=%s, patronymic=%s, birthday=%s, description=%s WHERE id = %s
+2024-04-06 16:25:50,520 INFO 127.0.0.1 - - [06/Apr/2024 16:25:50] "POST /account/edit/user HTTP/1.1" 200 -
+2024-04-06 16:27:49,503 INFO 127.0.0.1 - - [06/Apr/2024 16:27:49] "[31m[1mPOST /account/login HTTP/1.1[0m" 403 -
+2024-04-06 16:28:38,550 INFO 127.0.0.1 - - [06/Apr/2024 16:28:38] "[31m[1mPOST /account/login HTTP/1.1[0m" 400 -
+2024-04-06 16:29:54,645 INFO 127.0.0.1 - - [06/Apr/2024 16:29:54] "[31m[1mPOST /account/login HTTP/1.1[0m" 400 -
+2024-04-06 16:30:09,489 INFO 127.0.0.1 - - [06/Apr/2024 16:30:09] "POST /account/registration HTTP/1.1" 200 -
+2024-04-06 16:30:20,543 INFO 127.0.0.1 - - [06/Apr/2024 16:30:20] "[31m[1mPOST /account/login HTTP/1.1[0m" 400 -
+2024-04-06 16:30:24,020 INFO 127.0.0.1 - - [06/Apr/2024 16:30:24] "[31m[1mPOST /account/login HTTP/1.1[0m" 400 -
+2024-04-06 16:31:33,225 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\account\\login.py', reloading
+2024-04-06 16:31:33,353 INFO  * Restarting with stat
+2024-04-06 16:34:02,388 INFO DATABASE LOAD.
+2024-04-06 16:34:02,569 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-06 16:34:02,569 INFO [33mPress CTRL+C to quit[0m
+2024-04-06 16:34:02,570 INFO  * Restarting with stat
+2024-04-06 16:34:03,384 INFO DATABASE LOAD.
+2024-04-06 16:34:03,570 WARNING  * Debugger is active!
+2024-04-06 16:34:03,578 INFO  * Debugger PIN: 328-982-154
+2024-04-06 16:34:06,802 INFO 127.0.0.1 - - [06/Apr/2024 16:34:06] "POST /account/login HTTP/1.1" 200 -
+2024-04-06 16:35:06,751 INFO  * Detected change in 'C:\\Projects\\WISH\\personal-account-backend\\backend\\account\\login.py', reloading
+2024-04-06 16:35:06,842 INFO  * Restarting with stat
+2024-04-06 16:35:07,605 INFO DATABASE LOAD.
+2024-04-06 16:35:07,804 WARNING  * Debugger is active!
+2024-04-06 16:35:07,813 INFO  * Debugger PIN: 328-982-154

@@ -26,7 +26,7 @@ def registration_handler():
     data = request.json
 
     try:
-        data['login'] = data['login'].lower().strip()
+        data['login'] = data['login'].strip().lower()
     except KeyError:
         return dumps({'errorMessage': 'Недопустимые значения полей. Смотрите документацию.'}, ensure_ascii=False), 400
     except TypeError:

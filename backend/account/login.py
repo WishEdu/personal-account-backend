@@ -1,5 +1,4 @@
 from json import dumps
-from re import fullmatch
 from dataclasses import asdict
 
 from logging import error
@@ -10,7 +9,6 @@ from . import account_bp
 from backend.modules.user import action_login, get_user_info
 from backend.modules.session_manager import create_session
 from backend.modules.code_generator import get_hash
-from backend.entities import regex_config, regex_messages
 from backend.entities.forms import LoginForm
 from backend.modules.database import cursor, db
 
@@ -29,6 +27,11 @@ def user_login_handler():
         form = LoginForm(**data)
     except TypeError:
         return dumps({'errorMessage': 'Недопустимые значения полей. Смотрите документацию.'}, ensure_ascii=False), 400
+
+    form.login = form.login.strip().lower()
+    is_valid = form.get_validation
+    if is_valid is not True:
+        return dumps(is_valid, ensure_ascii=False), 400
 
     user = action_login(password=get_hash(form.password), login=form.login)
     
@@ -65,4 +68,4 @@ def user_login_check():
     if is_login_available := user_id is None:
         msg = 'свободен'
     return dumps({'message': f'Логин {login} {msg}.', 'is_login_available': is_login_available},
-                 ensure_ascii=False), 500
+                 ensure_ascii=False), 200

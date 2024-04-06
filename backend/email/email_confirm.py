@@ -56,7 +56,6 @@ def send_confirm_mail_handler():
     return dumps({'status': True}, ensure_ascii=False), 200
 
 
-
 @email_bp.get('/confirm')
 @cross_origin()
 def confirm_mail_handler():
@@ -79,7 +78,6 @@ def confirm_mail_handler():
         error(f'ERROR: {e}')
         db.rollback()
         return dumps({'errorMessage': 'Произошла ошибка базы данных'}, ensure_ascii=False), 500
-
 
     db.commit()
     return redirect(getenv('FRONTEND_HOST'))

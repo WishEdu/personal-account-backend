@@ -10,6 +10,7 @@ regex_config = {
     'last_name': r'[А-ЯЁ]{1}[а-яё ]{1,255}',
     'patronymic': r'[А-ЯЁ]{1}[а-яё ]{1,255}',
     'birthday': r'(19|20)\d\d-((0[1-9]|1[012])-(0[1-9]|[12]\d)|(0[13-9]|1[012])-30|(0[13578]|1[02])-31)',
+    'background_color': r'^#(?:[0-9a-fA-F]{3}){1,2}$'
 }
 
 regex_messages = {
@@ -18,7 +19,9 @@ regex_messages = {
     'email': 'Неверный формат электронной почты.',
     'first_name': 'Некорректный формат имени.',
     'last_name': 'Некорректный формат фамилии.',
-    'patronymic': 'Некорректный формат отчества.'
+    'patronymic': 'Некорректный формат отчества.',
+    'birthday':'День рождения должен быть в формате год-месяц-день',
+    'background_color':r'Цвет фона должен быть в формате hex с # в начале'
 }
 
 
@@ -31,7 +34,7 @@ class BaseFormClass:
             value = asdict(self)[f.name]
             _type = get_args(f.type) or (f.type,)
 
-            if isinstance(value, str) and not fullmatch(regex_config[f.name], value) and type(None) not in _type:
+            if isinstance(value, str) and not fullmatch(regex_config.get(f.name, '.'), value) and type(None) not in _type:
                 return {'errorMessage': regex_messages.get(f.name, f'Ошибка валидации поля {f.name}')}
             elif _type[0] != type(value) and value != f.default:
                 return {'errorMessage': f'Поле {f.name} со значением: {value} имеет некорректный тип данных'}
