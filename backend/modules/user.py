@@ -76,7 +76,6 @@ def action_login(login, password):
 
 
 def user_edit(data, user_id):
-
     try:
         form = UserEditForm(**data)
     except TypeError:
@@ -104,7 +103,8 @@ def user_edit(data, user_id):
 
 
 def get_users():
-    cursor.execute(f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users ORDER BY id")
+    cursor.execute(
+        f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users ORDER BY id")
     rows = cursor.fetchall()
 
     users = []
@@ -126,5 +126,9 @@ def get_users():
         )
 
         user.roles = [Role(**role) for role in cursor.fetchall()]
-        users.append(asdict(user))
+        
+        user = asdict(user)
+        del user['permissions']
+        users.append(user)
+
     return users

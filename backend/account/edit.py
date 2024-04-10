@@ -6,7 +6,7 @@ from backend.modules.user import user_edit
 user_edit_bp = Blueprint('user_edit', __name__, url_prefix='/edit')
 
 
-@user_edit_bp.post('/user')
+@user_edit_bp.post('/info')
 @access_handler()
 def user_edit_handler(user):
     return user_edit(request.json, user.id)

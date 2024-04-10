@@ -8,6 +8,7 @@ users_bp = Blueprint('users', __name__, url_prefix='/users')
 
 @users_bp.get('/')
 def users_get_handler():
+
     return dumps({'users': get_users()}, ensure_ascii=False, default=str), 200
 
 
@@ -19,5 +20,6 @@ def user_search(param):
         user = get_user(id=param)
     else:
         user = get_user(login=param)
-
-    return dumps(asdict(get_user_info(user)), ensure_ascii=False, default=str), 200
+    user = asdict(get_user_info(user))
+    del user['permissions']
+    return dumps(user, ensure_ascii=False, default=str), 200
