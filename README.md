@@ -178,3 +178,94 @@ login=str
 }
 ```
 
+### Profile Editor
+
+* Endpoint -  `/account/edit/info`
+* Method - `POST`
+* Headers - `Authorization: token`
+
+**Request**
+```py
+{
+    "first_name":str,
+    "last_name":str,
+    "patronymic": str,
+    "birthday": str,
+    "description": str,
+    "background_color": str
+}
+```
+**Example**
+```py
+{
+    "background_color": "#e209e5",
+    "first_name": "Данила",
+    "last_name": "Гинда",
+    "patronymic": "",
+    "birthday": "2005-04-07",
+    "description": "Backend Developer from Voskresensk"
+}
+```
+**Response**
+```py
+{
+    "first_name":str,
+    "last_name":str,
+    "patronymic": str,
+    "birthday": str,
+    "description": str,
+    "background_color": str
+}
+```
+
+### Get users
+
+* Endpoint -  `/info/users/`
+* Method - `GET`
+
+**Response**
+```py
+[
+    {
+        "id": int,
+        "login": str,
+        "email":  str,
+        "first_name":  str,
+        "last_name":  str,
+        "created_at": str,  # 2024-03-07 23:32:53.818302
+        "description": str,
+        "background_color": str,  # #005CC9
+        "birthday": str,  # "2005-04-07" | ""
+        "patronymic": str, # | ""
+        "avatar": str,  # Url for static
+        "groups": [],
+        "roles": []
+    }
+]
+```
+
+### Get user by login or id
+
+* Endpoint -  `/info/users/search-<login|id>`
+* Method - `GET`
+
+**Response**
+```py
+
+{
+    "id": int,
+    "login": str,
+    "email":  str,
+    "first_name":  str,
+    "last_name":  str,
+    "created_at": str,  # 2024-03-07 23:32:53.818302
+    "description": str,
+    "background_color": str,  # #005CC9
+    "birthday": str,  # "2005-04-07" | ""
+    "patronymic": str, # | ""
+    "avatar": str,  # Url for static
+    "groups": [],
+    "roles": []
+}
+
+```

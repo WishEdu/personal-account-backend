@@ -126,7 +126,7 @@ def get_users():
         )
 
         user.roles = [Role(**role) for role in cursor.fetchall()]
-        
+
         user = asdict(user)
         del user['permissions']
         users.append(user)
