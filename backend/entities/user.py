@@ -31,7 +31,7 @@ class User:
     background_color: str = '#005CC9'
     birthday: Optional[str] = ''
     patronymic: Optional[str] = ''
-    avatar: str = f'{getenv("CDN_HOST")}/assets/static/images/unknown_avatar.jpg'
+    avatar: Optional[str] = None
 
     groups: List[Group] = field(default_factory=list)
     roles: List[Role] = field(default_factory=list)

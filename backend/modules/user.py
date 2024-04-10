@@ -1,11 +1,12 @@
-from os import getenv
+from logging import error, info
 from typing import Optional
 from datetime import datetime
-from dataclasses import fields
+from dataclasses import fields, astuple, asdict
 from dotenv import load_dotenv
-
-from backend.modules.database import cursor
+from json import dumps
+from backend.modules.database import cursor, db
 from backend.entities.user import User, Group, Role
+from backend.entities.forms import UserEditForm
 
 load_dotenv()
 
@@ -72,3 +73,62 @@ def action_login(login, password):
         return None
 
     return User(**row)
+
+
+def user_edit(data, user_id):
+    try:
+        form = UserEditForm(**data)
+    except TypeError:
+        return dumps({'errorMessage': 'Недопустимые значения полей. Смотрите документацию.'}, ensure_ascii=False), 400
+
+    is_valid = form.get_validation
+
+    if is_valid is not True:
+        return dumps(is_valid, ensure_ascii=False), 400
+
+    q = f"UPDATE users SET {', '.join([f'{f.name}=%s' for f in fields(form)])} WHERE id = %s"
+    info(q)
+    try:
+        cursor.execute(q,
+                       (*astuple(form), user_id))
+    except Exception as e:
+        db.rollback()
+
+        error(f'DATABASE ERROR ON EDIT_ACCOUNT: {e}')
+        return dumps({'errorMessage': 'Во время запроса произошла ошибка, повторите попытку позже.'},
+                     ensure_ascii=False), 500
+
+    db.commit()
+    return dumps(asdict(form), ensure_ascii=False), 200
+
+
+def get_users():
+    cursor.execute(
+        f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users ORDER BY id")
+    rows = cursor.fetchall()
+
+    users = []
+    for row in rows:
+        user = User(**row)
+        cursor.execute(
+            f"""SELECT g.id, g.name
+                FROM groups g 
+                INNER JOIN users_groups ug ON ug.group_id = g.id AND ug.user_id = %s""",
+            (user.id,))
+
+        user.groups = [Group(**group) for group in cursor.fetchall()]
+
+        cursor.execute(
+            f"""SELECT r.id, r.name
+                FROM roles r 
+                INNER JOIN users_roles ur ON r.id = ur.role_id AND ur.user_id = %s""",
+            (user.id,)
+        )
+
+        user.roles = [Role(**role) for role in cursor.fetchall()]
+
+        user = asdict(user)
+        del user['permissions']
+        users.append(user)
+
+    return users

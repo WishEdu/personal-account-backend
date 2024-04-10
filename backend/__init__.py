@@ -24,3 +24,6 @@ app.register_blueprint(account_bp)
 
 from backend.email import email_bp
 app.register_blueprint(email_bp)
+
+from backend.info import info_bp
+app.register_blueprint(info_bp)

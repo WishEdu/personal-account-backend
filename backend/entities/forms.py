@@ -19,7 +19,23 @@ class LoginForm(BaseFormClass):
     password: str
     login: str
 
+
 @dataclass
 class ConfirmEmailForm(BaseFormClass):
     user_id: int
     email: str
+
+
+@dataclass
+class UserEditForm(BaseFormClass):
+    background_color: str
+
+    first_name: str
+    last_name: str
+    patronymic: Optional[str] = ''
+
+    birthday: Optional[str] = ''
+    description: Optional[str] = ''
+
+
+
