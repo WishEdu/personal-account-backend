@@ -101,3 +101,30 @@ def user_edit(data, user_id):
 
     db.commit()
     return dumps(asdict(form), ensure_ascii=False), 200
+
+
+def get_users():
+    cursor.execute(f"SELECT {', '.join((f.name for f in fields(User) if f.type in (str, int, datetime, Optional[str], Optional[int])))} FROM users ORDER BY id")
+    rows = cursor.fetchall()
+
+    users = []
+    for row in rows:
+        user = User(**row)
+        cursor.execute(
+            f"""SELECT g.id, g.name
+                FROM groups g 
+                INNER JOIN users_groups ug ON ug.group_id = g.id AND ug.user_id = %s""",
+            (user.id,))
+
+        user.groups = [Group(**group) for group in cursor.fetchall()]
+
+        cursor.execute(
+            f"""SELECT r.id, r.name
+                FROM roles r 
+                INNER JOIN users_roles ur ON r.id = ur.role_id AND ur.user_id = %s""",
+            (user.id,)
+        )
+
+        user.roles = [Role(**role) for role in cursor.fetchall()]
+        users.append(asdict(user))
+    return users
