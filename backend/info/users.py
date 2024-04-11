@@ -1,7 +1,10 @@
 from dataclasses import asdict
-from flask import Blueprint, request
 from json import dumps
+
+from flask import Blueprint
+
 from backend.modules.user import get_users, get_user, get_user_info
+
 
 users_bp = Blueprint('users', __name__, url_prefix='/users')
 

@@ -2,6 +2,7 @@ from re import fullmatch
 from dataclasses import dataclass, fields, asdict
 from typing import get_args
 
+
 regex_config = {
     'login': r'[a-z0-9_]{4,32}',
     'password': r'((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20})',

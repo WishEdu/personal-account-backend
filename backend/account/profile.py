@@ -1,5 +1,6 @@
 from json import dumps
 from dataclasses import asdict
+
 from . import account_bp
 from backend.authentification import access_handler
 from backend.modules.user import get_user_info

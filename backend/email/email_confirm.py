@@ -1,10 +1,7 @@
 from hashlib import sha256
 from datetime import datetime
 from json import dumps
-from os import getenv
 
-
-from dotenv import load_dotenv
 from flask import request, url_for, redirect
 from flask_mail import Message
 from flask_cors import cross_origin
@@ -16,8 +13,7 @@ from backend.modules.database import cursor, db
 from backend.entities.forms import ConfirmEmailForm
 from backend.modules.create_mail import generate_mail
 from backend.modules.user import get_user
-
-load_dotenv()
+from backend.configs import SENDER_NAME, FRONTEND_HOST
 
 
 def create_unique_id(email) -> str:
@@ -47,7 +43,7 @@ def send_confirm_mail_handler():
     db.commit()
     msg = Message(
         'Подтвердите учетную запись',
-        sender=getenv('SENDER_NAME'),
+        sender=SENDER_NAME,
         recipients = [form.email]
     )
     user = get_user(id = form.user_id)
@@ -80,4 +76,4 @@ def confirm_mail_handler():
         return dumps({'errorMessage': 'Произошла ошибка базы данных'}, ensure_ascii=False), 500
 
     db.commit()
-    return redirect(getenv('FRONTEND_HOST'))
+    return redirect(FRONTEND_HOST)

@@ -1,10 +1,9 @@
 from datetime import datetime
 from typing import List, Optional
 from dataclasses import dataclass, field, fields
-from os import getenv
-from dotenv import load_dotenv
 
-load_dotenv()
+from backend.configs import CLOUD_HOST
+
 
 @dataclass
 class Group:
@@ -39,7 +38,7 @@ class User:
 
     def __post_init__(self):
         if self.avatar:
-            self.avatar = f'{getenv("CDN_HOST")}/assets/user/{self.id}/avatar/{self.avatar}'
+            self.avatar = f'{CLOUD_HOST}/assets/user/{self.id}/avatar/{self.avatar}'
 
         for f in fields(self):
             if self.__getattribute__(f.name) is None:

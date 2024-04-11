@@ -2,13 +2,12 @@ from logging import error, info
 from typing import Optional
 from datetime import datetime
 from dataclasses import fields, astuple, asdict
-from dotenv import load_dotenv
 from json import dumps
+
 from backend.modules.database import cursor, db
 from backend.entities.user import User, Group, Role
 from backend.entities.forms import UserEditForm
 
-load_dotenv()
 
 
 def get_user_permissions(user_id):
