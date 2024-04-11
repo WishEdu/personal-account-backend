@@ -7,7 +7,7 @@ user_edit_bp = Blueprint('user_edit', __name__, url_prefix='/edit')
 
 
 @user_edit_bp.post('/info')
-@access_handler()
+@access_handler(permission='EDIT_PROFILE')
 def user_edit_handler(user):
     return user_edit(request.json, user.id)
 
