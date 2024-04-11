@@ -1,14 +1,12 @@
-from backend import app
 from json import dumps
 from flask import request as r
 from flask_cors import cross_origin
-import numpy as np
 
 from backend.modules.session_manager import get_user_by_session
 from backend.modules.user import get_user_permissions, get_user
 
 
-def access_handler(permissions: tuple = ()):
+def access_handler(permission: str | None = None):
     def handle(func):
         @cross_origin()
         def inner(**kwargs):
@@ -22,11 +20,11 @@ def access_handler(permissions: tuple = ()):
             if user_id is None:
                 return dumps({'errorMessage': 'Нет доступа!'}, ensure_ascii=False), 403
 
-            if len(permissions) > 0:
+            if permission is not None:
                 user_permissions = get_user_permissions(user_id)
 
-                have_access = np.intersect1d(user_permissions, permissions)
-                if len(have_access) == 0:
+                have_access = permission in user_permissions
+                if not have_access:
                     return dumps({'errorMessage': 'Нет доступа!'}, ensure_ascii=False), 403
 
             user = get_user(id=user_id)
