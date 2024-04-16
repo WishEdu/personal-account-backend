@@ -1,4 +1,5 @@
 from flask import Blueprint, request
+
 from . import account_bp
 from backend.authentification import access_handler
 from backend.modules.user import user_edit

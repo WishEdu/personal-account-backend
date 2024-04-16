@@ -1,18 +1,15 @@
-from os import getenv
-from dotenv import load_dotenv
-
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from logging import info
 
+from backend.configs import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
 
-load_dotenv()
 
 db = psycopg2.connect(
-    database=getenv('DB_NAME'),
-    user=getenv('DB_USER'),
-    password=getenv('DB_PASSWORD'),
-    host=getenv('DB_HOST')
+    database=DB_NAME,
+    user=DB_USER,
+    password=DB_PASSWORD,
+    host=DB_HOST
 )
 
 cursor = db.cursor(cursor_factory=RealDictCursor)

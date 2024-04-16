@@ -2,6 +2,7 @@ from hmac import new
 from json import dumps
 from hashlib import sha256
 from datetime import datetime
+
 from logging import error
 from backend.modules.database import cursor, db
 from backend.modules.code_generator import get_code
